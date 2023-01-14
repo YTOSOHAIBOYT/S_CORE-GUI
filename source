@@ -9,8 +9,8 @@ Duration = 16;
 wait(3)
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "Loading the script...";
-	Text = "";
+	Title = "Loading the Hub...";
+	Text = "This might take a while...";
 	Icon = ""})
 Duration = 16;
 
@@ -22,7 +22,7 @@ local colors = {
     TextColor = Color3.fromRGB(0,100,100),
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
-local Window = Library.CreateLib("S_Core Gui", colors)
+local Window = Library.CreateLib("S_Core Hub", colors)
 --guis
 
 local Tab = Window:NewTab("Character")
@@ -1543,6 +1543,7 @@ end)
                 Cham : NewButton("Cham (Everyone)", "Chams Everyone on server", function()
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/releases/main/viewport-chams"))()
                     end)
+		    wait(0.5)
                 Scripts2 : NewButton("Fake Lag (INFO CREDIT)", "Fake Lag (Made by me)", function()
                     while true do
                         game.Players.LocalPlayer.Character.Head.Anchored = true
@@ -1557,6 +1558,7 @@ end)
                         wait(0.1)
                         end
                     end)
+		    wait(2)
                 MainSection : NewButton("Setup Auto", "Setup You're Humanoid for Best!", function()
                     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
                     game.Players.LocalPlayer.Character.Humanoid.JumpPower = 90
@@ -1574,13 +1576,14 @@ end)
                 Aims : NewButton("Silent Aim", "What can i explain?", function()
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3", true))()
                     end)
+		    wait(4)
                                     MainSection : NewButton("Restarter", "Restarts The Humanoid to Normal!", function()
                     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
                     game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
                         end)
+			wait(2)
                         MainSection3:NewTextBox("Btools (USERNAME (CLIENT))", "Gives Btools To Player", function(txt)
 wait(0.1)
-
 player = game.Players[txt]
 workspacePlayer = game.Workspace[txt]
 
@@ -2048,12 +2051,13 @@ Open.MouseButton1Down:connect(function()
 	Openfram.Visible = false
 end)
                             end)
+			    wait(3)
                             FamousGuis : NewButton("pendulum hub v5", "a famous hub gui thats cool", function()
                                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
                                 end)
                                 credit:NewLabel("sohaibrobloxking = owner")
                                 credit:NewLabel("PetraTX = suggester, helper")
-                    MainSection : NewButton("Invisible", "Invisible literally", function()
+                    MainSection2 : NewButton("Invisible", "Invisible literally", function()
                         local c = game.Players.LocalPlayer.Character:GetChildren()
 
                         for i, v in pairs(c) do
