@@ -27,17 +27,21 @@ local Window = Library.CreateLib("S_Core Hub", colors)
 
 local Tab = Window:NewTab("Character")
 local MainSection = Tab : NewSection("Humanoid")
+wait(1)
 local MainSection3 = Tab : NewSection("Backpack")
 local MainSection2 = Tab : NewSection("Avatar")
 local Tab2 = Window : NewTab("Scripts")
+wait(3)
 local Scripts1 = Tab2 : NewSection("Famous Scripts")
 local Scripts2 = Tab2 : NewSection("Other Scripts")
+wait(2)
 local Tab3 = Window : NewTab("Hacks Esp")
 local Cham = Tab3 : NewSection("Esp")
 local Aims = Tab3 : NewSection("Aims")
-local Tab4 = Window:NewTab("Gui's")
-local FamousGuis = Tab4 : NewSection("Famous Gui's")
-local RandomGuis = Tab4 : NewSection("Random Gui's")
+wait(0.07)
+local Tab4 = Window:NewTab("Other Hubs")
+local FamousGuis = Tab4 : NewSection("Famous Hubs")
+local RandomGuis = Tab4 : NewSection("Random Hubs")
 local credits = Window:NewTab("Credits")
 local credit = credits : NewSection("credit")
 
@@ -2060,13 +2064,15 @@ end)
                     MainSection2 : NewButton("Invisible", "Invisible literally", function()
                         local c = game.Players.LocalPlayer.Character:GetChildren()
 
-                        for i, v in pairs(c) do
-                            if v:IsA("Part") then
-                                v.Transparency = 1
-                            elseif v:IsA("Accesory") then
-                                    v:Destroy()
-                            elseif v:IsA("Hat") then
-                                    v:Destroy()
+                        for i, e in pairs(c) do
+                            if e:IsA("Part") then
+                                e.Transparency = 1
+			    else
+			    local b = e:GetChildren
+				for i,v in pairs(b) do
+				if v:IsA("Part") then
+				   v.Transparency = 1
+				end
                             end
                             wait(0.003)
                         end
