@@ -24,7 +24,7 @@ local colors = {
 }
 local Window = Library.CreateLib("S_Core Hub", colors)
 --guis
-
+wait(1)
 local Tab = Window:NewTab("Character")
 local MainSection = Tab : NewSection("Humanoid")
 wait(1)
@@ -1541,6 +1541,7 @@ local runDummyScript = function(f,scri)
     coroutine.resume(cors[i])
     end
 end)
+wait (2)
     Scripts1 : NewButton("Studio Dummy(INFO)", "This only works on a few game (HATS REQUIRED)", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/QRZRLC7N",true))()
         end)
@@ -2060,7 +2061,9 @@ end)
                                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
                                 end)
                                 credit:NewLabel("sohaibrobloxking = owner")
+                                wait(1)
                                 credit:NewLabel("PetraTX = suggester, helper")
+                                wait(0.7)
                     MainSection2 : NewButton("Invisible", "Invisible literally", function()
                         local c = game.Players.LocalPlayer.Character:GetChildren()
 
